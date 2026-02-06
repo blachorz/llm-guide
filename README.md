@@ -12,6 +12,10 @@
 - **行動裝置優化 (RWD)**：
     - 已完成手機版面 (Mobile-First) 的適配，包含標題排版優化與元件防溢處理。
     - 分類選單採用「水平捲動」設計，提升小螢幕操作體驗。
+- **搜尋引擎優化 (SEO/GEO/AEO)**：
+    - **SEO Ready**：已配置完整的 Meta Tags、Open Graph 與 Twitter Card，確保在社群分享時的預覽效果。
+    - **AI 搜尋優化 (GEO)**：實作 `SoftwareApplication` 與 `ItemListComponent` 的 JSON-LD 結構化資料，讓 AI 搜尋引擎（如 Perplexity, Gemini）能精準讀取工具列表。
+    - **語意化結構**：全面升級 HTML 標籤（如 `<article>`），提升可讀性與檢索權重。
 
 ## 技術架構與遷移目標 (Technical Stack & Migration)
 
