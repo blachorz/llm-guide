@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-TW" class="scroll-smooth">
+<html lang="zh-TW" class="scroll-smooth overflow-x-hidden">
 
 <head>
     <meta charset="UTF-8">
@@ -93,7 +93,8 @@
 
         .hero-glow {
             position: absolute;
-            width: 600px;
+            width: 100%;
+            max-width: 600px;
             height: 600px;
             background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
             top: -20%;
@@ -128,12 +129,12 @@
         @scroll.window="scrollY = window.scrollY">
         <div class="container mx-auto px-4 sm:px-6 flex justify-between items-center">
             <a href="#" @click.prevent="showHome()">
-                <div class="flex items-center gap-3">
+                <div class="flex items-center gap-2 sm:gap-3">
                     <div
-                        class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-lg sm:text-xl shadow-lg shadow-primary/20">
+                        class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-base sm:text-xl shadow-lg shadow-primary/20">
                         AI
                     </div>
-                    <span class="text-lg sm:text-xl font-display font-bold text-white tracking-wide">AI 大集合</span>
+                    <span class="text-base sm:text-xl font-display font-bold text-white tracking-wide">AI 大集合</span>
                 </div>
             </a>
             <a href="https://github.com/blachorz/llm-guide" target="_blank"
@@ -155,9 +156,10 @@
 
             <!-- Hero Section -->
             <div class="text-center pt-8 pb-6 sm:pt-16 sm:pb-10 relative">
-                <div class="hero-glow"></div>
+                <div class="hero-glow w-full max-w-[600px]"></div>
 
-                <h1 class="text-5xl sm:text-7xl font-display font-bold text-white tracking-tight mb-6 leading-tight">
+                <h1
+                    class="text-4xl sm:text-7xl font-display font-bold text-white tracking-tight mb-6 leading-tight px-4 sm:px-0">
                     探索 <span class="text-gradient">大模型</span> 的<br />無限可能
                 </h1>
 
@@ -167,7 +169,8 @@
                     The Ultimate AI Guide
                 </div>
 
-                <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                <p
+                    class="text-base sm:text-lg lg:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed px-6 sm:px-0">
                     為您的需求尋找最佳 AI 夥伴<br class="hidden sm:block" />無論是程式開發、創意寫作、邏輯推論還是影像生成<br
                         class="hidden sm:block" />這裡都有最適合您的選擇
                 </p>
@@ -213,7 +216,7 @@
             </div>
 
             <!-- Models Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
                 <template x-for="model in filteredModels" :key="model.id">
                     <div class="glass-card rounded-2xl p-6 flex flex-col h-full cursor-pointer group relative overflow-hidden"
                         @click="openDetail(model)">
