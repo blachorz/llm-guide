@@ -9,6 +9,17 @@
 - **靜態展示**：目前的網頁內容（包含工具列表、分類等）皆為 Hardcode 在 HTML 中的靜態資料。
 - **功能限制**：部分互動功能僅為演示用途，尚未連接真實後端邏輯。
 
+## 技術架構與遷移目標 (Technical Stack & Migration)
+
+- **目前實作 (Current Implementation)**：
+    - 使用 **Alpine.js** 處理極輕量的互動邏輯。
+    - 使用 **Tailwind CSS** 進行快速樣式開發。
+    - 目標是快速驗證 Mockup 互動與視覺效果。
+
+- **未來遷移目標 (Future Migration)**：
+    - 預計遷移至 **Next.js (React)** 框架。
+    - **核心目標**：目前的 HTML 結構與 Class 命名需保持乾淨，以將未來轉換至 React Component 的阻力降到最低。
+
 ## 後續開發規劃 Roadmap
 
 本專案將按以下階段進行後續開發：
